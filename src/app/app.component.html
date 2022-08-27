@@ -1,8 +1,11 @@
 
-<h1 style="color:red">{{event}}</h1>
 
-<input type="text" (change)="onTextChange()">
 
-<input type="button" value="Click" (click)="onclick()" (mouseover)="onMouseHover()">
+<input type="text"  value="{{textValue}}" (keyup)="handleOnChange()">
+
+<!-- here dissable works with boolean value and interpolation return 
+string value so disabled = "{{isDisabled}}" will not work
+-->
+<input type="button" id="{{btnId}}" value="Click" [disabled]="isDisabled">
 
 
