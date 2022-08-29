@@ -1,11 +1,28 @@
 
 
 
-<input type="text"  value="{{textValue}}" (keyup)="handleOnChange()">
+<!-- <input type="text"  value="{{textValue}}" (keyup)="handleOnChange()"> -->
+
+<!-- using string -->
+<input type="text"  value="{{textValue}}" [class]="myClass"  />
+<br/>
+<br/>
+<!-- using array -->
+<input type="text"  value="{{textValue}}" [class]="myClassArr"  />
+<br/>
+<br/>
+<!-- using object -->
+<input type="text"  value="{{textValue}}" [class]="myClassObj"  />
+<br/>
+<br/>
+<!-- using class dynamic and normal html class-->
+<input type="text"  value="{{textValue}}" class="textColor"  [class.textHeight]="true"  />
+
+
 
 <!-- here dissable works with boolean value and interpolation return 
 string value so disabled = "{{isDisabled}}" will not work
 -->
-<input type="button" id="{{btnId}}" value="Click" [disabled]="isDisabled">
+<!-- <input type="button" id="{{btnId}}" value="Click" [disabled]="isDisabled"> -->
 
 
