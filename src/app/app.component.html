@@ -1,1 +1,8 @@
 <img [attr.src] = "src" [attr.width] = "width" />
+
+<!-- direct value -->
+<p [style.color]="'red'" [style.font-size]="'40px'">{{paragraph}}</p>
+<!-- using variable -->
+<p [style]="myStyle" [style.font-size]="'40px'">{{paragraph}}</p>
+<!-- using object -->
+<p [style]="myStyleObj" [style.font-size]="'40px'">{{paragraph}}</p>
