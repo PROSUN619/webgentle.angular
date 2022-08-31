@@ -27,4 +27,7 @@ export class AppComponent {
   foo():boolean{
     return false;
   }
+  callPhone(value:any):void{
+    alert(value);
+  }
 }
