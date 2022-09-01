@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  switchValue = 10;
   employeeNames = ['Mike','Tom','Amit','Dipa','Sara'];
 
   employeeArray = [

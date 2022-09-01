@@ -38,3 +38,21 @@
 </table>
 
 <button (click)="refreshEmployee()">Refresh</button>
+
+<h1>Switch cases</h1>
+
+
+<div [ngSwitch]="switchValue">
+    <div *ngSwitchCase="1">
+        I am First
+    </div>
+    <div *ngSwitchCase="2">
+        I am Second  
+    </div>
+    <div *ngSwitchCase="3">
+        I am Third
+    </div>
+    <div *ngSwitchDefault>
+        I am Default
+    </div>
+</div>
