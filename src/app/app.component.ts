@@ -7,27 +7,28 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  btnId: string = 'btnSave';
-  textValue: string = '';
-  isDisabled: boolean = true;
-  paragraph: string = "Jay Ganesh Deva";
-  src = "https://images.unsplash.com/photo-1661692429215-ea082874a29a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80";
-  width= "200"
-  myStyle='color:green; font-style:italic';
-  myStyleObj : any ={'color':'yellow', 'font-style':'italic'};
+  employeeNames = ['Mike','Tom','Amit','Dipa','Sara'];
 
-  handleOnChange(): void {
+  employeeArray = [
+    {name: 'Mike', salary: 300, country: 'US'},
+    {name: 'Tom', salary: 300, country: 'UK'},
+    {name: 'Amit', salary: 300, country: 'IN'},
+    {name: 'Dipa', salary: 300, country: 'IN'},
+    {name: 'Sara', salary: 300, country: 'CN'}
+  ]
 
-    if (this.textValue.length > 0)
-      this.isDisabled = true;
-    else
-      this.isDisabled = false;
+  refreshEmployee(){
+    this.employeeArray = [
+      {name: 'Mike', salary: 300, country: 'US'},
+      {name: 'Tom', salary: 300, country: 'UK'},
+      {name: 'Amit', salary: 300, country: 'IN'},
+      {name: 'Dipa', salary: 300, country: 'IN'},
+      {name: 'Sara', salary: 300, country: 'CN'},
+      {name: 'Brian', salary: 320, country: 'WI'}
+    ]
   }
 
-  foo():boolean{
-    return false;
-  }
-  callPhone(value:any):void{
-    alert(value);
+  refreshEmployees(index: number, employee : any): string{
+    return  employee.name;
   }
 }

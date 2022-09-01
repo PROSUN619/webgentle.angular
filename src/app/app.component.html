@@ -1,20 +1,40 @@
-
-<div *ngIf="false; then data else nodata">
-    
-</div>
-
-
-
-
-<ng-template #data>
-    <ul>
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
-    </ul>
-</ng-template>
+<ul>
+    <li *ngFor="let name of employeeNames; index as i; first as f; last as l;
+    even as e; odd as o
+    ">
+        <!-- here first means whether the element is the first element of the array or not -->
+        {{i+1}} --> {{name}} --> {{f}} --> {{l}} --> {{e}} --> {{o}}
+    </li>
+</ul>
 
 
-<ng-template #nodata>
-    no data found
-</ng-template>
+<table border="1">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Salary
+            </th>
+            <th>
+                Country
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employeeArray; trackBy: refreshEmployees">
+            <td>
+                {{employee.name}}
+            </td>
+            <td>
+                {{employee.salary}}
+            </td>
+            <td>
+                {{employee.country}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button (click)="refreshEmployee()">Refresh</button>
